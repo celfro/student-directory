@@ -31,9 +31,8 @@ def print_header #using methods to make the code re-usable.
 end
 
 def print(students)
-  students.each_with_index do |student, index|
-    indexplusone = index + 1
-    puts "#{indexplusone}. #{student[:name]} (#{student[:cohort]} cohort) "
+  students.each do |student|
+    puts "#{student[:name]} (#{student[:cohort]} cohort) " if student[:name].start_with?("N") == true
   end
 end
 
