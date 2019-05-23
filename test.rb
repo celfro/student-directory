@@ -20,6 +20,7 @@ def input_students
     name = gets.chomp
     puts "Please enter the cohort".center(80)
     cohort = gets.chomp
+
   end
   # return the array of students
   students
@@ -31,9 +32,11 @@ def print_header
 end
 
 def print(students)
-  students.each do |student|
-    puts "#{student[:name]} (#{student[:cohort]} cohort)".center(80)
+  i = 0
+  while i < students.size
+    i += 1
   end
+  puts students.group_by { |x| x[:cohort]}.each{ |_, i| i.replace(i.map{ |h| h[:name]})}
 end
 
 def print_footer(students)
