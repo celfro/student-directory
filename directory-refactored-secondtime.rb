@@ -2,8 +2,6 @@
 def input_students
   puts "Please enter the names of the students".center(80)
   puts "To finish, just hit return twice".center(80)
-  # create an empty array
-  #@students = []
   # get the first name
   name = gets.chomp
   # while the name is not empty, repeat this code
@@ -60,16 +58,15 @@ def process(selection)
 end
 
 def interactive_menu
-  #@students = [] #Outside the loop so it continue accross different iteratopms
   loop do
     print_menu
     process(gets.chomp)
   end
 end
 
+#nothing happens until we call the methods
 interactive_menu
 input_students
-#nothing happens until we call the methods
 print_header
 print_student_list
 print_menu
