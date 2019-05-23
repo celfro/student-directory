@@ -4,12 +4,12 @@ def input_students
   # create an empty array
   students = []
   # get the first name
-  name = gets.chomp
+  name = gets.chop
 
   puts "Please enter the cohort".center(80)
   puts "To finish, just hit return twice".center(80)
   #get the first cohort
-  cohort = gets.chomp
+  cohort = gets.chop
 
   while !name.empty? do
     # add the student hash to the array
@@ -21,9 +21,9 @@ def input_students
       end
     # get another name from the user
     puts "Please enter the names of the students".center(80)
-    name = gets.chomp
+    name = gets.chop
     puts "Please enter the cohort".center(80)
-    cohort = gets.chomp
+    cohort = gets.chop
 
   end
   # return the array of students
